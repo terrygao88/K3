@@ -40,7 +40,7 @@ metadata:
   namespace: postgres-ns
 rules:
   - apiGroups: [""]
-    resources: ["pods", "pods/log", "pods/status", "services", "persistentvolumeclaims"]
+    resources: ["pods", "pods/exec", "pods/log", "pods/status", "services", "persistentvolumeclaims"]
     verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
   - apiGroups: ["apps"]
     resources: ["deployments", "statefulsets", "deployments/scale", "statefulsets/scale"]

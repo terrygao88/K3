@@ -59,6 +59,9 @@ Legend:
   [ServiceAccount] = Identity/permissions assigned to pods
   [Role]           = Allowed K8s API actions
   [RoleBinding]    = Links ServiceAccount to Role
+  [NodePort]       = Exposes a service on a fixed port accessible from outside the cluster
+  psql             = PostgreSQL command-line client for running SQL queries
+  kubectl          = Kubernetes command-line client for managing cluster resources
 ```
 
 **Flow:** Developer logs into Coder → creates workspace → runs `pg-manager start` → pg-manager calls K8s API → creates StatefulSet + PVC + Service in `postgres-ns` → developer connects via `postgres-{name}.postgres-ns.svc.cluster.local:5432`
