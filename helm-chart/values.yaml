@@ -1,0 +1,36 @@
+# -- Namespace for PostgreSQL instances
+postgresNamespace: postgres-ns
+
+# -- ServiceAccount name for workspace pods
+serviceAccount:
+  name: workspace-sa
+  namespace: coder
+
+# -- RBAC role name
+rbac:
+  roleName: workspace-db-role
+  bindingName: workspace-db-binding
+
+# -- Base PVC for PostgreSQL (pg-manager creates per-user PVCs dynamically)
+pvc:
+  name: postgres-data
+  storage: 5Gi
+
+# -- Coder subchart configuration
+coder:
+  coder:
+    service:
+      type: NodePort
+      httpNodePort: 30080
+    env:
+      - name: CODER_ACCESS_URL
+        value: "http://coder.coder.svc.cluster.local"
+      - name: CODER_WILDCARD_ACCESS_URL
+        value: ""
+    resources:
+      requests:
+        cpu: "250m"
+        memory: "256Mi"
+      limits:
+        cpu: "2000m"
+        memory: "1Gi"

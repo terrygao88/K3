@@ -1,0 +1,27 @@
+# Gradle
+.gradle/
+build/
+pg-manager/.gradle/
+pg-manager/build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Helm
+helm-chart/charts/
+helm-chart/Chart.lock
+
+# Claude
+.claude/

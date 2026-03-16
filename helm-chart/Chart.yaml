@@ -1,0 +1,10 @@
+apiVersion: v2
+name: coder-dev-env
+description: Coder dev environment with multi-tenant PostgreSQL management
+version: 1.0.0
+type: application
+
+dependencies:
+  - name: coder
+    version: "2.*"
+    repository: https://helm.coder.com/v2
