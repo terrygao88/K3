@@ -1,4 +1,4 @@
-# K8s Dev Environment
+# K3s Dev Environment
 
 Local Kubernetes environment on WSL2 where developers get isolated, on-demand PostgreSQL instances through Coder workspaces.
 
